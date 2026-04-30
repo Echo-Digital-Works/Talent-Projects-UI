@@ -62,7 +62,7 @@ export default function Solutions() {
   };
 
   return (
-    <section id="how-it-works" className="responsive-section" style={{ background: "#f8f9fa", overflow: "hidden", position: "relative" }}>
+    <section id="how-it-works" className="responsive-section" style={{ background: "#f5f3ff", overflow: "hidden", position: "relative" }}>
       <div style={{ maxWidth: "1280px", margin: "0 auto", textAlign: "center", position: "relative" }}>
 
         <motion.div
@@ -76,7 +76,7 @@ export default function Solutions() {
             style={{
               fontSize: "clamp(2rem, 4vw, 3rem)",
               fontWeight: 800,
-              color: "#4f27a6",
+              color: "#6c2bd9",
               marginBottom: "16px",
               letterSpacing: "-0.02em"
             }}
@@ -273,17 +273,17 @@ export default function Solutions() {
                   fontWeight: 700,
                   marginBottom: "24px",
                   boxShadow: "0 10px 25px rgba(108, 43, 217, 0.3)",
-                  border: "4px solid #f8f9fa", // to cut out the dashed line behind
+                  border: "4px solid #f5f3ff", // to cut out the dashed line behind
                 }}
               >
                 {step.num}
               </div>
 
-              <h3 style={{ fontSize: "1.1rem", fontWeight: 700, color: "#1e293b", marginBottom: "12px", background: "#f8f9fa", padding: "0 8px" }}>
+              <h3 style={{ fontSize: "1.1rem", fontWeight: 700, color: "#1e293b", marginBottom: "12px", background: "#f5f3ff", padding: "0 8px" }}>
                 {step.title}
               </h3>
 
-              <p style={{ fontSize: "0.9rem", color: "#64748b", lineHeight: 1.6, maxWidth: "220px", background: "#f8f9fa", padding: "0 8px" }}>
+              <p style={{ fontSize: "0.9rem", color: "#64748b", lineHeight: 1.6, maxWidth: "220px", background: "#f5f3ff", padding: "0 8px" }}>
                 {step.desc}
               </p>
             </motion.div>

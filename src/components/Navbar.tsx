@@ -69,20 +69,20 @@ export default function Navbar({ onOpenEnquiry }: { onOpenEnquiry?: () => void }
               flexShrink: 0,
             }}
           >
-            <img 
-              src="/logo-removebg-preview__1_-removebg-preview.png" 
-              alt="TalentProjects Logo" 
-              style={{ height: "40px", objectFit: "contain" }} 
+            <img
+              src="/Untitled design (12).png"
+              alt="TalentProjects Logo"
+              style={{ height: "40px", objectFit: "contain" }}
             />
             <span
               style={{
                 fontSize: "1.05rem",
                 fontWeight: 800,
-                color: "#0f172a",
                 letterSpacing: "-0.01em",
               }}
             >
-              TalentProjects
+              <span style={{ color: "#0f172a" }}>Talent</span>
+              <span style={{ color: "#6c2bd9" }}>Projects</span>
             </span>
           </Link>
 
@@ -229,8 +229,8 @@ export default function Navbar({ onOpenEnquiry }: { onOpenEnquiry?: () => void }
                   paddingTop: "12px",
                 }}
               >
-                <button 
-                  className="nav-btn-outline" 
+                <button
+                  className="nav-btn-outline"
                   style={{ width: "100%", justifyContent: "center" }}
                   onClick={(e) => handleNavClick(e, "/#expertise")}
                 >

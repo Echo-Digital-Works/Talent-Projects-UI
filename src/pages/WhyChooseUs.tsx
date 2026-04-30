@@ -79,7 +79,7 @@ export default function WhyChooseUs() {
         .orbit-ring {
           position: absolute;
           border-radius: 50%;
-          border: 1px dashed rgba(255, 255, 255, 0.15);
+          border: 1px dashed rgba(0, 0, 0, 0.1);
         }
         .orbit-ring-solid {
           position: absolute;
@@ -89,8 +89,8 @@ export default function WhyChooseUs() {
       `}</style>
 
       <section style={{ 
-        background: "linear-gradient(180deg, #2e1065 0%, #1e1b4b 100%)", // Deep cosmic purple
-        color: "white",
+        background: "#f5f3ff",
+        color: "#0f172a",
         position: "relative",
         overflow: "hidden",
         padding: "120px 20px"
@@ -118,7 +118,7 @@ export default function WhyChooseUs() {
           >
             <motion.span 
               variants={fadeRight}
-              style={{ display: "inline-block", color: "#a78bfa", fontWeight: 700, letterSpacing: "0.2em", textTransform: "uppercase", fontSize: "0.8rem", marginBottom: "16px" }}
+              style={{ display: "inline-block", color: "#6c2bd9", fontWeight: 700, letterSpacing: "0.2em", textTransform: "uppercase", fontSize: "0.8rem", marginBottom: "16px" }}
             >
               The Talent Advantage
             </motion.span>
@@ -135,7 +135,7 @@ export default function WhyChooseUs() {
             
             <motion.p 
               variants={fadeRight}
-              style={{ color: "#cbd5e1", fontSize: "clamp(1rem, 2vw, 1.15rem)", lineHeight: 1.6, marginBottom: "48px", maxWidth: "500px" }}
+              style={{ color: "#64748b", fontSize: "clamp(1rem, 2vw, 1.15rem)", lineHeight: 1.6, marginBottom: "48px", maxWidth: "500px" }}
             >
               We don't just sell components; we provide a full-spectrum
               engineering ecosystem to ensure your project's success from concept to execution.
@@ -146,13 +146,13 @@ export default function WhyChooseUs() {
                 <motion.div
                   key={feature.title}
                   variants={fadeRight}
-                  whileHover={{ scale: 1.02, x: 10, backgroundColor: "rgba(255,255,255,0.1)", borderColor: "rgba(167, 139, 250, 0.5)" }}
+                  whileHover={{ scale: 1.02, x: 10, backgroundColor: "rgba(139,92,246,0.05)", borderColor: "rgba(139, 92, 246, 0.3)" }}
                   style={{ 
                     display: "flex", 
                     alignItems: "center", 
                     gap: "20px",
-                    background: "rgba(255,255,255,0.03)",
-                    border: "1px solid rgba(255,255,255,0.05)",
+                    background: "rgba(0,0,0,0.02)",
+                    border: "1px solid rgba(0,0,0,0.06)",
                     padding: "20px 24px",
                     borderRadius: "20px",
                     backdropFilter: "blur(10px)",
@@ -169,13 +169,13 @@ export default function WhyChooseUs() {
                     display: "flex", 
                     alignItems: "center", 
                     justifyContent: "center",
-                    boxShadow: "inset 0 0 12px rgba(255,255,255,0.1)",
+                    boxShadow: "inset 0 0 12px rgba(139,92,246,0.1)",
                     flexShrink: 0
                   }}>
                     {feature.icon}
                   </div>
                   <div>
-                    <h4 style={{ fontSize: "1.1rem", fontWeight: 700, color: "white", marginBottom: "4px" }}>
+                    <h4 style={{ fontSize: "1.1rem", fontWeight: 700, color: "#0f172a", marginBottom: "4px" }}>
                       {feature.title}
                     </h4>
                     <p style={{ fontSize: "0.9rem", color: "#94a3b8", lineHeight: 1.4 }}>
@@ -199,9 +199,9 @@ export default function WhyChooseUs() {
               width: "100%", 
               maxWidth: "520px", 
               aspectRatio: "1 / 1", 
-              background: "linear-gradient(145deg, rgba(255,255,255,0.05) 0%, rgba(0,0,0,0.4) 100%)", 
+              background: "linear-gradient(145deg, rgba(139,92,246,0.05) 0%, rgba(0,0,0,0.02) 100%)", 
               borderRadius: "40px",
-              boxShadow: "0 30px 60px -15px rgba(0,0,0,0.5), inset 0 1px 0 rgba(255,255,255,0.1)",
+              boxShadow: "0 30px 60px -15px rgba(0,0,0,0.08), inset 0 1px 0 rgba(255,255,255,0.5)",
               position: "relative",
               overflow: "hidden",
               display: "flex",
@@ -237,18 +237,18 @@ export default function WhyChooseUs() {
               {/* Floating Data Badges */}
               <motion.div 
                 animate={{ y: [-10, 10, -10] }} transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
-                style={{ position: "absolute", top: "15%", left: "10%", background: "rgba(15,23,42,0.8)", padding: "8px 16px", borderRadius: "100px", border: "1px solid rgba(167, 139, 250, 0.3)", display: "flex", alignItems: "center", gap: "8px", backdropFilter: "blur(10px)" }}
+                style={{ position: "absolute", top: "15%", left: "10%", background: "rgba(255,255,255,0.9)", padding: "8px 16px", borderRadius: "100px", border: "1px solid rgba(139, 92, 246, 0.2)", display: "flex", alignItems: "center", gap: "8px", backdropFilter: "blur(10px)", boxShadow: "0 4px 12px rgba(0,0,0,0.08)" }}
               >
                 <div style={{ width: "8px", height: "8px", borderRadius: "50%", background: "#34d399", boxShadow: "0 0 8px #34d399" }} />
-                <span style={{ fontSize: "0.75rem", fontWeight: 700, color: "white", letterSpacing: "0.05em" }}>SYSTEM ONLINE</span>
+                <span style={{ fontSize: "0.75rem", fontWeight: 700, color: "#0f172a", letterSpacing: "0.05em" }}>SYSTEM ONLINE</span>
               </motion.div>
 
               <motion.div 
                 animate={{ y: [10, -10, 10] }} transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
-                style={{ position: "absolute", bottom: "20%", right: "5%", background: "rgba(15,23,42,0.8)", padding: "8px 16px", borderRadius: "100px", border: "1px solid rgba(217, 70, 239, 0.3)", display: "flex", alignItems: "center", gap: "8px", backdropFilter: "blur(10px)" }}
+                style={{ position: "absolute", bottom: "20%", right: "5%", background: "rgba(255,255,255,0.9)", padding: "8px 16px", borderRadius: "100px", border: "1px solid rgba(217, 70, 239, 0.2)", display: "flex", alignItems: "center", gap: "8px", backdropFilter: "blur(10px)", boxShadow: "0 4px 12px rgba(0,0,0,0.08)" }}
               >
                 <svg width="14" height="14" fill="none" stroke="#f472b6" strokeWidth="2" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-                <span style={{ fontSize: "0.75rem", fontWeight: 700, color: "white", letterSpacing: "0.05em" }}>100% TESTED</span>
+                <span style={{ fontSize: "0.75rem", fontWeight: 700, color: "#0f172a", letterSpacing: "0.05em" }}>100% TESTED</span>
               </motion.div>
 
             </div>
