@@ -55,7 +55,7 @@ export default function Navbar({ onOpenEnquiry }: { onOpenEnquiry?: () => void }
             display: "flex",
             alignItems: "center",
             justifyContent: "space-between",
-            height: "56px",
+            height: "72px",
           }}
         >
           {/* Logo */}
@@ -64,19 +64,37 @@ export default function Navbar({ onOpenEnquiry }: { onOpenEnquiry?: () => void }
             style={{
               display: "flex",
               alignItems: "center",
-              gap: "8px",
+              gap: "12px",
               textDecoration: "none",
               flexShrink: 0,
             }}
           >
-            <img
-              src="/Untitled design (12).png"
-              alt="TalentProjects Logo"
-              style={{ height: "40px", objectFit: "contain" }}
-            />
+            <div style={{
+                height: "52px",
+                width: "52px",
+                borderRadius: "50%",
+                border: "2px solid #6c2bd9",
+                padding: "2px",
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+                boxShadow: "0 4px 12px rgba(108, 43, 217, 0.15)",
+                background: "white"
+            }}>
+              <img
+                src="/Untitled design (12).png"
+                alt="TalentProjects Logo"
+                style={{ 
+                  height: "100%", 
+                  width: "100%", 
+                  objectFit: "cover", 
+                  borderRadius: "50%"
+                }}
+              />
+            </div>
             <span
               style={{
-                fontSize: "1.05rem",
+                fontSize: "1.25rem",
                 fontWeight: 800,
                 letterSpacing: "-0.01em",
               }}
