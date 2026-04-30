@@ -27,7 +27,7 @@ export default function FAQ() {
     <section 
       className="responsive-section" 
       style={{ 
-        background: "#020617", // Deep obsidian background to match other sections
+        background: "#ffffff",
         position: "relative",
         overflow: "hidden",
         padding: "100px 20px"
@@ -53,15 +53,15 @@ export default function FAQ() {
           <span style={{ 
             display: "inline-flex", alignItems: "center", gap: "8px",
             textTransform: "uppercase", letterSpacing: "0.2em", fontSize: "0.75rem", 
-            color: "#8b5cf6", fontWeight: 700, marginBottom: "16px"
+            color: "#6c2bd9", fontWeight: 700, marginBottom: "16px"
           }}>
-            <span style={{ width: "8px", height: "8px", borderRadius: "50%", background: "#8b5cf6", boxShadow: "0 0 10px #8b5cf6" }} />
+            <span style={{ width: "8px", height: "8px", borderRadius: "50%", background: "#6c2bd9", boxShadow: "0 0 10px #6c2bd9" }} />
             Support & Knowledge
           </span>
-          <h2 style={{ fontSize: "clamp(2rem, 4vw, 3rem)", fontWeight: 800, color: "#f8fafc", marginBottom: "16px", letterSpacing: "-0.02em" }}>
-            Frequently Asked <span style={{ background: "linear-gradient(135deg, #8b5cf6 0%, #38bdf8 100%)", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent" }}>Questions</span>
+          <h2 style={{ fontSize: "clamp(2rem, 4vw, 3rem)", fontWeight: 800, color: "#0f172a", marginBottom: "16px", letterSpacing: "-0.02em" }}>
+            Frequently Asked <span style={{ background: "linear-gradient(135deg, #6c2bd9 0%, #38bdf8 100%)", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent" }}>Questions</span>
           </h2>
-          <p style={{ color: "#94a3b8", fontSize: "1.1rem", fontWeight: 400, maxWidth: "500px", margin: "0 auto" }}>
+          <p style={{ color: "#64748b", fontSize: "1.1rem", fontWeight: 400, maxWidth: "500px", margin: "0 auto" }}>
             Everything you need to know about our engineering services, hardware kits, and support processes.
           </p>
         </motion.div>
@@ -79,11 +79,11 @@ export default function FAQ() {
                 viewport={{ once: true }}
                 transition={{ duration: 0.4, delay: index * 0.1 }}
                 style={{
-                  background: isActive ? "rgba(255, 255, 255, 0.05)" : "rgba(255, 255, 255, 0.02)",
+                  background: isActive ? "rgba(139, 92, 246, 0.05)" : "rgba(0, 0, 0, 0.02)",
                   backdropFilter: "blur(20px)",
                   WebkitBackdropFilter: "blur(20px)",
                   borderRadius: "20px",
-                  border: `1px solid ${isActive ? "rgba(139, 92, 246, 0.4)" : "rgba(255, 255, 255, 0.05)"}`,
+                  border: `1px solid ${isActive ? "rgba(139, 92, 246, 0.4)" : "rgba(0, 0, 0, 0.08)"}`,
                   boxShadow: isActive ? "0 20px 40px -10px rgba(139, 92, 246, 0.15)" : "none",
                   overflow: "hidden",
                   transition: "all 0.3s ease"
@@ -101,25 +101,25 @@ export default function FAQ() {
                     border: "none",
                     cursor: "pointer",
                     textAlign: "left",
-                    color: isActive ? "#f8fafc" : "#cbd5e1",
+                    color: isActive ? "#0f172a" : "#475569",
                     fontWeight: 700,
                     fontSize: "1.1rem",
                     transition: "color 0.3s ease"
                   }}
-                  onMouseEnter={(e) => { if(!isActive) e.currentTarget.style.color = "#f8fafc" }}
-                  onMouseLeave={(e) => { if(!isActive) e.currentTarget.style.color = "#cbd5e1" }}
+                  onMouseEnter={(e) => { if(!isActive) e.currentTarget.style.color = "#0f172a" }}
+                  onMouseLeave={(e) => { if(!isActive) e.currentTarget.style.color = "#475569" }}
                 >
                   <span style={{ paddingRight: "16px" }}>{faq.question}</span>
                   
                   {/* Animated Morphing Icon */}
                   <motion.div
-                    animate={{ rotate: isActive ? 135 : 0, backgroundColor: isActive ? "#8b5cf6" : "transparent" }}
+                    animate={{ rotate: isActive ? 135 : 0, backgroundColor: isActive ? "#6c2bd9" : "transparent" }}
                     transition={{ duration: 0.3, ease: "easeInOut" }}
                     style={{
                       width: "32px", height: "32px", borderRadius: "50%",
-                      border: `1px solid ${isActive ? "#8b5cf6" : "rgba(255,255,255,0.2)"}`,
+                      border: `1px solid ${isActive ? "#6c2bd9" : "rgba(0,0,0,0.15)"}`,
                       display: "flex", alignItems: "center", justifyContent: "center",
-                      color: isActive ? "white" : "#94a3b8",
+                      color: isActive ? "white" : "#64748b",
                       flexShrink: 0
                     }}
                   >
@@ -140,7 +140,7 @@ export default function FAQ() {
                     >
                       <div style={{ 
                         padding: "0 32px 32px 32px", 
-                        color: "#94a3b8", 
+                        color: "#64748b", 
                         lineHeight: 1.7, 
                         fontSize: "0.95rem" 
                       }}>
@@ -154,7 +154,7 @@ export default function FAQ() {
                 {isActive && (
                   <motion.div 
                     layoutId="activeFaqAccent"
-                    style={{ height: "3px", width: "100%", background: "linear-gradient(90deg, #8b5cf6, #38bdf8)" }} 
+                    style={{ height: "3px", width: "100%", background: "linear-gradient(90deg, #6c2bd9, #38bdf8)" }} 
                   />
                 )}
               </motion.div>
