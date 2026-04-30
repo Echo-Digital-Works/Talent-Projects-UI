@@ -105,7 +105,7 @@ const domains = [
     shortTitle: "ROBOTICS",
     description: "Kinematic modeling, robotic arm manipulation, and computer vision integration for automated tasks.",
     theme: { main: "#d946ef", light: "rgba(217, 70, 239, 0.12)", dark: "#c026d3" },
-    gradient: "linear-gradient(135deg, #d946ef 0%, #8b5cf6 100%)",
+    gradient: "linear-gradient(135deg, #d946ef 0%, #6c2bd9 100%)",
     icon: (
       <svg width="20" height="20" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" viewBox="0 0 24 24">
         <rect x="3" y="11" width="18" height="10" rx="2" />
@@ -121,8 +121,8 @@ const domains = [
     title: "EEE/ECE Projects",
     shortTitle: "ELECTRONICS",
     description: "Embedded systems, PCB design, IoT sensor networks, and advanced microcontroller programming.",
-    theme: { main: "#8b5cf6", light: "rgba(139, 92, 246, 0.12)", dark: "#7c3aed" },
-    gradient: "linear-gradient(135deg, #8b5cf6 0%, #6366f1 100%)",
+    theme: { main: "#6c2bd9", light: "rgba(108, 43, 217, 0.12)", dark: "#5b21b6" },
+    gradient: "linear-gradient(135deg, #6c2bd9 0%, #6366f1 100%)",
     icon: (
       <svg width="20" height="20" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" viewBox="0 0 24 24">
         <rect x="4" y="4" width="16" height="16" rx="2" ry="2" />
@@ -341,15 +341,15 @@ export default function Expertise() {
     <section
       id="expertise"
       style={{
-        background: "linear-gradient(180deg, #f8fafc 0%, #fafcff 100%)",
+        background: "#ffffff",
         position: "relative",
         overflow: "hidden",
         padding: "100px 20px"
       }}
     >
       {/* Ambient Background Glows */}
-      <motion.div variants={ambientGlowAnimation} animate="animate" style={{ position: "absolute", top: "-10%", right: "-5%", width: "40vw", height: "40vw", background: "radial-gradient(circle, rgba(14, 165, 233, 0.06) 0%, transparent 70%)", filter: "blur(70px)", zIndex: 0, pointerEvents: "none" }} />
-      <motion.div variants={ambientGlowAnimation} animate="animate" transition={{ delay: 3 }} style={{ position: "absolute", bottom: "-10%", left: "-5%", width: "40vw", height: "40vw", background: "radial-gradient(circle, rgba(249, 115, 22, 0.05) 0%, transparent 70%)", filter: "blur(70px)", zIndex: 0, pointerEvents: "none" }} />
+      <motion.div variants={ambientGlowAnimation} animate="animate" style={{ position: "absolute", top: "-10%", right: "-5%", width: "40vw", height: "40vw", background: "radial-gradient(circle, rgba(14, 165, 233, 0.08) 0%, transparent 70%)", filter: "blur(70px)", zIndex: 0, pointerEvents: "none" }} />
+      <motion.div variants={ambientGlowAnimation} animate="animate" transition={{ delay: 3 }} style={{ position: "absolute", bottom: "-10%", left: "-5%", width: "40vw", height: "40vw", background: "radial-gradient(circle, rgba(249, 115, 22, 0.08) 0%, transparent 70%)", filter: "blur(70px)", zIndex: 0, pointerEvents: "none" }} />
 
       <div style={{ maxWidth: "1280px", margin: "0 auto", position: "relative", zIndex: 1 }}>
 
@@ -368,7 +368,7 @@ export default function Expertise() {
             transition={{ delay: 0.1 }}
             style={{
               display: "inline-block", textTransform: "uppercase", letterSpacing: "0.3em", fontSize: "0.75rem",
-              background: "linear-gradient(135deg, #0ea5e9, #8b5cf6)", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent",
+              background: "linear-gradient(135deg, #0ea5e9, #6c2bd9)", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent",
               fontWeight: 800, marginBottom: "16px"
             }}
           >
@@ -376,7 +376,7 @@ export default function Expertise() {
           </motion.span>
           <h2 style={{ fontSize: "clamp(2rem, 4vw, 3rem)", fontWeight: 800, color: "#0f172a", letterSpacing: "-0.02em", marginBottom: "16px" }}>
             Engineering{" "}
-            <span style={{ background: "linear-gradient(135deg, #0ea5e9, #8b5cf6)", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent" }}>
+            <span style={{ background: "linear-gradient(135deg, #0ea5e9, #6c2bd9)", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent" }}>
               Excellence
             </span>
           </h2>
@@ -436,7 +436,7 @@ export default function Expertise() {
                   onClick={() => goToSlide(idx)}
                   style={{
                     width: idx === pageIndex ? "32px" : "8px", height: "8px", borderRadius: "4px",
-                    background: idx === pageIndex ? "linear-gradient(135deg, #0ea5e9, #8b5cf6)" : "#cbd5e1",
+                    background: idx === pageIndex ? "linear-gradient(135deg, #0ea5e9, #6c2bd9)" : "#cbd5e1",
                     border: "none", cursor: "pointer", transition: "all 0.4s cubic-bezier(0.16, 1, 0.3, 1)"
                   }}
                 />

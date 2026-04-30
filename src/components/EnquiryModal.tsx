@@ -8,15 +8,44 @@ interface EnquiryModalProps {
 
 export default function EnquiryModal({ isOpen, onClose }: EnquiryModalProps) {
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const [formData, setFormData] = useState({
+    fullName: "",
+    email: "",
+    mobile: "",
+    alternateMobile: "",
+    domain: "",
+    query: ""
+  });
 
   const handleClose = () => {
     onClose();
     // Reset state after animation completes
-    setTimeout(() => setIsSubmitted(false), 300);
+    setTimeout(() => {
+      setIsSubmitted(false);
+      setFormData({ fullName: "", email: "", mobile: "", alternateMobile: "", domain: "", query: "" });
+    }, 300);
+  };
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
+
+    // Build WhatsApp message
+    const message =
+      `📩 *New Enquiry from Website*\n\n` +
+      `👤 *Name:* ${formData.fullName}\n` +
+      `📧 *Email:* ${formData.email}\n` +
+      `📱 *Mobile:* ${formData.mobile}\n` +
+      `${formData.alternateMobile ? `📱 *Alt Mobile:* ${formData.alternateMobile}\n` : ""}` +
+      `🏷️ *Domain:* ${formData.domain}\n\n` +
+      `💬 *Query:*\n${formData.query}`;
+
+    const whatsappUrl = `https://api.whatsapp.com/send/?phone=917904075373&text=${encodeURIComponent(message)}&type=phone_number&app_absent=0`;
+    window.location.href = whatsappUrl;
+
     setIsSubmitted(true);
     // Auto-close the modal after 3.5 seconds
     setTimeout(() => {
@@ -36,7 +65,7 @@ export default function EnquiryModal({ isOpen, onClose }: EnquiryModalProps) {
             position: "fixed",
             inset: 0,
             zIndex: 9999,
-            backgroundColor: "rgba(2, 6, 23, 0.8)",
+            backgroundColor: "rgba(255, 255, 255, 0.8)",
             backdropFilter: "blur(8px)",
             display: "flex",
             alignItems: "center",
@@ -51,10 +80,10 @@ export default function EnquiryModal({ isOpen, onClose }: EnquiryModalProps) {
             transition={{ type: "spring", stiffness: 300, damping: 25 }}
             onClick={(e) => e.stopPropagation()}
             style={{
-              background: "linear-gradient(145deg, #0f172a, #020617)",
+              background: "#ffffff",
               borderRadius: "24px",
-              border: "1px solid rgba(255, 255, 255, 0.1)",
-              boxShadow: "0 25px 50px -12px rgba(0, 0, 0, 0.5)",
+              border: "1px solid rgba(0, 0, 0, 0.08)",
+              boxShadow: "0 25px 50px -12px rgba(0, 0, 0, 0.1)",
               width: "100%",
               maxWidth: "600px",
               maxHeight: "90vh",
@@ -69,7 +98,7 @@ export default function EnquiryModal({ isOpen, onClose }: EnquiryModalProps) {
                 position: "absolute",
                 top: "24px",
                 right: "24px",
-                background: "rgba(255,255,255,0.1)",
+                background: "rgba(0,0,0,0.05)",
                 border: "none",
                 borderRadius: "50%",
                 width: "36px",
@@ -82,8 +111,8 @@ export default function EnquiryModal({ isOpen, onClose }: EnquiryModalProps) {
                 transition: "all 0.2s",
                 zIndex: 10
               }}
-              onMouseOver={(e) => { e.currentTarget.style.color = "white"; e.currentTarget.style.background = "rgba(255,255,255,0.2)"; }}
-              onMouseOut={(e) => { e.currentTarget.style.color = "#94a3b8"; e.currentTarget.style.background = "rgba(255,255,255,0.1)"; }}
+              onMouseOver={(e) => { e.currentTarget.style.color = "#0f172a"; e.currentTarget.style.background = "rgba(0,0,0,0.1)"; }}
+              onMouseOut={(e) => { e.currentTarget.style.color = "#94a3b8"; e.currentTarget.style.background = "rgba(0,0,0,0.05)"; }}
             >
               <svg width="20" height="20" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24">
                 <path d="M6 18L18 6M6 6l12 12" />
@@ -101,7 +130,7 @@ export default function EnquiryModal({ isOpen, onClose }: EnquiryModalProps) {
                     transition={{ duration: 0.3 }}
                   >
                     <div style={{ marginBottom: "32px" }}>
-                      <h3 style={{ fontSize: "1.8rem", fontWeight: 800, color: "#f8fafc", marginBottom: "8px" }}>
+                      <h3 style={{ fontSize: "1.8rem", fontWeight: 800, color: "#0f172a", marginBottom: "8px" }}>
                         Free Consultation
                       </h3>
                       <p style={{ color: "#94a3b8", fontSize: "0.95rem" }}>
@@ -117,18 +146,18 @@ export default function EnquiryModal({ isOpen, onClose }: EnquiryModalProps) {
                           width: 100%;
                           padding: 14px 18px;
                           border-radius: 12px;
-                          border: 1px solid rgba(255, 255, 255, 0.1);
-                          background: rgba(15, 23, 42, 0.6);
-                          color: #f8fafc;
+                          border: 1px solid rgba(0, 0, 0, 0.1);
+                          background: rgba(255, 255, 255, 0.8);
+                          color: #0f172a;
                           font-size: 0.95rem;
                           outline: none;
                           transition: all 0.3s ease;
                           box-sizing: border-box;
                         }
                         .modal-input:focus {
-                          border-color: #38bdf8;
-                          background: rgba(15, 23, 42, 0.9);
-                          box-shadow: 0 0 0 4px rgba(56, 189, 248, 0.15);
+                          border-color: #6c2bd9;
+                          background: rgba(255, 255, 255, 1);
+                          box-shadow: 0 0 0 4px rgba(108, 43, 217, 0.1);
                         }
                         .modal-label {
                           display: block;
@@ -151,29 +180,29 @@ export default function EnquiryModal({ isOpen, onClose }: EnquiryModalProps) {
 
                       <div>
                         <label className="modal-label">Full Name</label>
-                        <input type="text" className="modal-input" placeholder="Enter your full name" required />
+                        <input type="text" name="fullName" value={formData.fullName} onChange={handleChange} className="modal-input" placeholder="Enter your full name" required />
                       </div>
 
                       <div>
                         <label className="modal-label">Email Address</label>
-                        <input type="email" className="modal-input" placeholder="Enter your email" required />
+                        <input type="email" name="email" value={formData.email} onChange={handleChange} className="modal-input" placeholder="Enter your email" required />
                       </div>
 
                       <div className="modal-grid-2">
                         <div>
                           <label className="modal-label">Mobile Number</label>
-                          <input type="tel" className="modal-input" placeholder="+91 00000 00000" required />
+                          <input type="tel" name="mobile" value={formData.mobile} onChange={handleChange} className="modal-input" placeholder="+91 00000 00000" required />
                         </div>
                         <div>
                           <label className="modal-label">Alternate Mobile</label>
-                          <input type="tel" className="modal-input" placeholder="+91 00000 00000" />
+                          <input type="tel" name="alternateMobile" value={formData.alternateMobile} onChange={handleChange} className="modal-input" placeholder="+91 00000 00000" />
                         </div>
                       </div>
 
                       <div>
                         <label className="modal-label">Domain</label>
                         <div style={{ position: "relative" }}>
-                          <select className="modal-input" style={{ appearance: "none", cursor: "pointer" }} required defaultValue="">
+                          <select name="domain" value={formData.domain} onChange={handleChange} className="modal-input" style={{ appearance: "none", cursor: "pointer" }} required>
                             <option value="" disabled>Select a domain...</option>
                             <option value="drone">Drone & UAV</option>
                             <option value="robotics">Robotics & AI</option>
@@ -191,6 +220,9 @@ export default function EnquiryModal({ isOpen, onClose }: EnquiryModalProps) {
                       <div>
                         <label className="modal-label">Your Query</label>
                         <textarea 
+                          name="query"
+                          value={formData.query}
+                          onChange={handleChange}
                           className="modal-input" 
                           rows={4} 
                           placeholder="Provide brief details about your requirement..."
@@ -272,7 +304,7 @@ export default function EnquiryModal({ isOpen, onClose }: EnquiryModalProps) {
                         initial={{ opacity: 0, y: 10 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ delay: 0.3 }}
-                        style={{ color: "#94a3b8", fontSize: "1.05rem", maxWidth: "340px", margin: "0 auto", lineHeight: 1.6 }}
+                        style={{ color: "#64748b", fontSize: "1.05rem", maxWidth: "340px", margin: "0 auto", lineHeight: 1.6 }}
                       >
                         Our top engineers are reviewing your specifications. We'll open a comm-link with you shortly.
                       </motion.p>

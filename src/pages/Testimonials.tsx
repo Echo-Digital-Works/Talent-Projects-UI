@@ -96,7 +96,7 @@ export default function Testimonials() {
     <section 
       id="testimonials"
       style={{
-        background: "#111111", // Deep dark background
+        background: "#ffffff",
         position: "relative",
         overflow: "hidden",
         padding: "100px 20px",
@@ -113,7 +113,7 @@ export default function Testimonials() {
         left: "20%",
         width: "600px",
         height: "600px",
-        background: "radial-gradient(circle, rgba(217, 119, 6, 0.05) 0%, transparent 70%)",
+        background: "radial-gradient(circle, rgba(139, 92, 246, 0.08) 0%, transparent 70%)",
         transform: "translate(-50%, -50%)",
         pointerEvents: "none"
       }}/>
@@ -126,7 +126,7 @@ export default function Testimonials() {
         style={{ textAlign: "center", marginBottom: "80px", zIndex: 1 }}
       >
         <h3 style={{ 
-          color: "#d97706", // Golden amber
+          color: "#6c2bd9",
           textTransform: "uppercase", 
           letterSpacing: "0.4em", 
           fontSize: "0.8rem",
@@ -164,8 +164,8 @@ export default function Testimonials() {
           }}>
             
             {/* Background Rings */}
-            <div style={{ position: "absolute", inset: 0, border: "1px solid rgba(255,255,255,0.05)", borderRadius: "50%" }} />
-            <div style={{ position: "absolute", inset: "60px", border: "1px solid rgba(255,255,255,0.05)", borderRadius: "50%" }} />
+            <div style={{ position: "absolute", inset: 0, border: "1px solid rgba(0,0,0,0.08)", borderRadius: "50%" }} />
+            <div style={{ position: "absolute", inset: "60px", border: "1px solid rgba(0,0,0,0.08)", borderRadius: "50%" }} />
             
             {/* SVG Connecting Line */}
             <svg width={CONTAINER_SIZE} height={CONTAINER_SIZE} style={{ position: "absolute", top: 0, left: 0, pointerEvents: "none" }}>
@@ -174,7 +174,7 @@ export default function Testimonials() {
                 y1={CENTER}
                 animate={{ x2: activePos.x, y2: activePos.y }}
                 transition={{ type: "spring", stiffness: 100, damping: 20 }}
-                stroke="#d97706"
+                stroke="#6c2bd9"
                 strokeWidth="1.5"
               />
             </svg>
@@ -184,10 +184,10 @@ export default function Testimonials() {
               position: "absolute",
               top: "50%", left: "50%",
               width: "12px", height: "12px",
-              background: "#d97706",
+              background: "#6c2bd9",
               borderRadius: "50%",
               transform: "translate(-50%, -50%)",
-              boxShadow: "0 0 20px rgba(217, 119, 6, 0.5)"
+              boxShadow: "0 0 20px rgba(139, 92, 246, 0.5)"
             }}/>
 
             {/* Avatars */}
@@ -210,8 +210,8 @@ export default function Testimonials() {
                     borderRadius: "50%",
                     cursor: "pointer",
                     padding: "3px",
-                    border: isActive ? "2px solid #d97706" : "2px solid transparent",
-                    background: isActive ? "rgba(217, 119, 6, 0.1)" : "transparent",
+                    border: isActive ? "2px solid #6c2bd9" : "2px solid transparent",
+                    background: isActive ? "rgba(139, 92, 246, 0.1)" : "transparent",
                     transition: "all 0.3s ease",
                     zIndex: isActive ? 10 : 1
                   }}
@@ -221,7 +221,7 @@ export default function Testimonials() {
                     filter: isActive ? "grayscale(0%)" : "grayscale(100%)",
                     opacity: isActive ? 1 : 0.4,
                     transition: "all 0.3s ease",
-                    background: "#262626", // Fallback color
+                    background: "#e2e8f0", // Fallback color
                     display: "flex", alignItems: "center", justifyContent: "center",
                     color: "#a3a3a3", fontWeight: 700, fontSize: "1.2rem"
                   }}>
@@ -255,10 +255,10 @@ export default function Testimonials() {
             >
               {/* Top Quote Mark & Tag */}
               <div style={{ display: "flex", alignItems: "center", gap: "16px", marginBottom: "24px" }}>
-                <span style={{ fontSize: "3rem", fontFamily: "serif", color: "#d97706", lineHeight: 0, marginTop: "20px" }}>“</span>
+                <span style={{ fontSize: "3rem", fontFamily: "serif", color: "#6c2bd9", lineHeight: 0, marginTop: "20px" }}>“</span>
                 <span style={{
-                  border: "1px solid rgba(217, 119, 6, 0.5)",
-                  color: "#d97706",
+                  border: "1px solid rgba(108, 43, 217, 0.5)",
+                  color: "#6c2bd9",
                   padding: "4px 16px",
                   borderRadius: "20px",
                   fontSize: "0.75rem",
@@ -271,7 +271,7 @@ export default function Testimonials() {
 
               {/* The Quote */}
               <p style={{
-                color: "#f3f4f6",
+                color: "#1e293b",
                 fontSize: "clamp(1.6rem, 3vw, 2.2rem)",
                 lineHeight: 1.4,
                 fontWeight: 300,
@@ -283,20 +283,20 @@ export default function Testimonials() {
 
               {/* Author Block */}
               <div style={{
-                borderLeft: "3px solid #d97706",
+                borderLeft: "3px solid #6c2bd9",
                 paddingLeft: "20px"
               }}>
-                <h4 style={{ color: "#ffffff", fontSize: "1.1rem", fontWeight: 700, marginBottom: "4px" }}>
+                <h4 style={{ color: "#0f172a", fontSize: "1.1rem", fontWeight: 700, marginBottom: "4px" }}>
                   {testimonials[activeIndex].name}
                 </h4>
-                <p style={{ color: "#9ca3af", fontSize: "0.9rem", marginBottom: "12px" }}>
+                <p style={{ color: "#64748b", fontSize: "0.9rem", marginBottom: "12px" }}>
                   {testimonials[activeIndex].role}
                 </p>
                 
                 {/* Golden Stars */}
                 <div style={{ display: "flex", gap: "4px" }}>
                   {[...Array(testimonials[activeIndex].rating)].map((_, i) => (
-                    <svg key={i} width="16" height="16" fill="#d97706" viewBox="0 0 24 24">
+                    <svg key={i} width="16" height="16" fill="#6c2bd9" viewBox="0 0 24 24">
                       <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
                     </svg>
                   ))}

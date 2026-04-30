@@ -14,74 +14,79 @@ const videoReels = [
   {
     id: 1,
     title: "Autonomous Drone Flight Test",
-    category: "AEROSPACE",
+    category: "DRONE",
     views: "12.5K",
     likes: "2.3K",
     duration: "0:45",
     theme: "#0ea5e9",
     thumbnailGrad: "linear-gradient(180deg, #0f172a 0%, #0284c7 100%)",
-    videoUrl: "https://www.instagram.com/reel/CqnJPufjRv6/?igsh=MWo4Y3lwMWh0bzBiaw==",
+    videoUrl: "https://www.instagram.com/reel/Ci7VP33jnAA/?igsh=MTM0M3M3b3VxcWtiZQ==",
     thumbUrl: "https://images.unsplash.com/photo-1508614589041-895b88991e3e?auto=format&fit=crop&w=800&q=80",
     creator: "DroneTech Labs"
   },
   {
     id: 2,
-    title: "RoboArm 6X Assembly Timelapse",
-    category: "ROBOTICS",
+    title: "Advanced Mechanical Gear System",
+    category: "MECHANICAL",
     views: "8.2K",
     likes: "1.2K",
     duration: "0:59",
     theme: "#f97316",
     thumbnailGrad: "linear-gradient(180deg, #0f172a 0%, #c2410c 100%)",
-    videoUrl: "https://youtube.com/shorts/1vYvU4aJebQ",
-    creator: "Robotics Hub"
+    videoUrl: "https://www.instagram.com/reel/Cj3NR2ZqA_x/?igsh=cHk3eGVuNzhqNmUz",
+    thumbUrl: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=800&q=80",
+    creator: "Mech Innovations"
   },
   {
     id: 3,
-    title: "Smart Grid Load Simulation",
-    category: "ENERGY",
+    title: "Smart Building Structural Analysis",
+    category: "CIVIL",
     views: "15K",
     likes: "3.1K",
     duration: "0:30",
     theme: "#10b981",
     thumbnailGrad: "linear-gradient(180deg, #0f172a 0%, #047857 100%)",
-    videoUrl: "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
-    creator: "Energy Innovations"
+    videoUrl: "https://www.instagram.com/reel/CkcLb0eDHCn/?igsh=MW5oaXl3dTZmZXo5cw==",
+    thumbUrl: "https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=800&q=80",
+    creator: "Civil Engineering Hub"
   },
   {
     id: 4,
-    title: "AI Computer Vision Object Tracking",
-    category: "SOFTWARE",
+    title: "Robotic Arm Assembly Line",
+    category: "ROBOTICS",
     views: "22K",
     likes: "4.5K",
     duration: "0:55",
-    theme: "#8b5cf6",
+    theme: "#6c2bd9",
     thumbnailGrad: "linear-gradient(180deg, #0f172a 0%, #6d28d9 100%)",
-    videoUrl: "https://youtube.com/shorts/9bZkp7q19f0",
-    creator: "AI Research"
+    videoUrl: "https://www.instagram.com/reel/ClOvv-kDrMV/?igsh=MXZjZHQxeDhyN2Z0Yw==",
+    thumbUrl: "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?auto=format&fit=crop&w=800&q=80",
+    creator: "Robotics Hub"
   },
   {
     id: 5,
-    title: "3D Printing Custom UAV Parts",
-    category: "MANUFACTURING",
+    title: "IoT Sensor Network Integration",
+    category: "EEE/ECE",
     views: "9.1K",
     likes: "1.8K",
     duration: "0:40",
     theme: "#ec4899",
     thumbnailGrad: "linear-gradient(180deg, #0f172a 0%, #be185d 100%)",
-    videoUrl: "/watch/3d-printing",
-    creator: "MakeLab"
+    videoUrl: "https://www.instagram.com/reel/ClbzAMYjL15/?igsh=MXVqNnVjbjdqNGNwNg==",
+    thumbUrl: "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=800&q=80",
+    creator: "Electronics Labs"
   },
   {
     id: 6,
-    title: "Industrial IoT Dashboard Demo",
+    title: "Industrial Automation Dashboard",
     category: "AUTOMATION",
     views: "11K",
     likes: "2.1K",
     duration: "0:50",
     theme: "#eab308",
     thumbnailGrad: "linear-gradient(180deg, #0f172a 0%, #a16207 100%)",
-    videoUrl: "/watch/iot-dashboard",
+    videoUrl: "https://www.instagram.com/reel/CsrK1nbMm9S/?igsh=aTJ0cGJkaXV4bW95",
+    thumbUrl: "https://images.unsplash.com/photo-1581092160562-40aa08e78837?auto=format&fit=crop&w=800&q=80",
     creator: "IoT Solutions"
   }
 ];
@@ -424,7 +429,7 @@ export default function ReelsShowcase() {
     <section
       id="portfolio"
       style={{
-        background: "#020617",
+        background: "#f5f3ff",
         position: "relative",
         overflow: "hidden",
         padding: isMobile ? "40px 16px 60px 16px" : "60px 20px"
@@ -434,7 +439,7 @@ export default function ReelsShowcase() {
       <div style={{
         position: "absolute",
         inset: 0,
-        opacity: 0.15,
+        opacity: 0.05,
         backgroundImage: `url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 0h40v40H0V0zm20 20h20v20H20V20zM0 20h20v20H0V20z' fill='%23ffffff' fill-opacity='0.05' fill-rule='evenodd'/%3E%3C/svg%3E")`,
         pointerEvents: "none"
       }} />
@@ -460,24 +465,24 @@ export default function ReelsShowcase() {
             textTransform: "uppercase",
             letterSpacing: "0.2em",
             fontSize: isMobile ? "0.7rem" : "0.75rem",
-            color: "#38bdf8",
+            color: "#6c2bd9",
             fontWeight: 700,
             marginBottom: "12px"
           }}>
-            <span style={{ width: "8px", height: "8px", borderRadius: "50%", background: "#38bdf8", boxShadow: "0 0 10px #38bdf8" }} />
+            <span style={{ width: "8px", height: "8px", borderRadius: "50%", background: "#6c2bd9", boxShadow: "0 0 10px rgba(108,43,217,0.4)" }} />
             {isMobile ? "Vertical Shorts" : "Innovation Reels"}
           </span>
           <h2 style={{
             fontSize: isMobile ? "clamp(1.6rem, 5vw, 2rem)" : "clamp(2rem, 5vw, 3rem)",
             fontWeight: 800,
-            color: "#f8fafc",
+            color: "#0f172a",
             letterSpacing: "-0.02em",
             marginBottom: "8px"
           }}>
-            Engineering <span style={{ color: "#818cf8" }}>in Action</span>
+            Engineering <span style={{ color: "#6c2bd9" }}>in Action</span>
           </h2>
           <p style={{
-            color: "#94a3b8",
+            color: "#64748b",
             fontSize: isMobile ? "0.85rem" : "0.95rem",
             maxWidth: "500px",
             margin: "0 auto",
@@ -527,8 +532,8 @@ export default function ReelsShowcase() {
               <button
                 onClick={prevSlide}
                 style={{
-                  background: "rgba(255,255,255,0.05)",
-                  border: "1px solid rgba(255,255,255,0.2)",
+                  background: "rgba(0,0,0,0.05)",
+                  border: "1px solid rgba(0,0,0,0.15)",
                   borderRadius: "50%",
                   width: "44px",
                   height: "44px",
@@ -536,11 +541,11 @@ export default function ReelsShowcase() {
                   alignItems: "center",
                   justifyContent: "center",
                   cursor: "pointer",
-                  color: "white",
+                  color: "#475569",
                   transition: "all 0.3s"
                 }}
-                onMouseOver={e => e.currentTarget.style.background = "rgba(255,255,255,0.15)"}
-                onMouseOut={e => e.currentTarget.style.background = "rgba(255,255,255,0.05)"}
+                onMouseOver={e => e.currentTarget.style.background = "rgba(0,0,0,0.1)"}
+                onMouseOut={e => e.currentTarget.style.background = "rgba(0,0,0,0.05)"}
               >
                 <svg width="20" height="20" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24">
                   <path d="M15 18l-6-6 6-6" />
@@ -556,8 +561,8 @@ export default function ReelsShowcase() {
                       width: idx === currentPage ? "40px" : "8px",
                       height: "8px",
                       borderRadius: "4px",
-                      background: idx === currentPage ? "#818cf8" : "rgba(255,255,255,0.2)",
-                      boxShadow: idx === currentPage ? "0 0 12px rgba(129, 140, 248, 0.6)" : "none",
+                      background: idx === currentPage ? "#6c2bd9" : "rgba(0,0,0,0.15)",
+                      boxShadow: idx === currentPage ? "0 0 12px rgba(108, 43, 217, 0.4)" : "none",
                       border: "none",
                       cursor: "pointer",
                       transition: "all 0.4s cubic-bezier(0.16, 1, 0.3, 1)"
@@ -569,8 +574,8 @@ export default function ReelsShowcase() {
               <button
                 onClick={nextSlide}
                 style={{
-                  background: "rgba(255,255,255,0.05)",
-                  border: "1px solid rgba(255,255,255,0.2)",
+                  background: "rgba(0,0,0,0.05)",
+                  border: "1px solid rgba(0,0,0,0.15)",
                   borderRadius: "50%",
                   width: "44px",
                   height: "44px",
@@ -578,11 +583,11 @@ export default function ReelsShowcase() {
                   alignItems: "center",
                   justifyContent: "center",
                   cursor: "pointer",
-                  color: "white",
+                  color: "#475569",
                   transition: "all 0.3s"
                 }}
-                onMouseOver={e => e.currentTarget.style.background = "rgba(255,255,255,0.15)"}
-                onMouseOut={e => e.currentTarget.style.background = "rgba(255,255,255,0.05)"}
+                onMouseOver={e => e.currentTarget.style.background = "rgba(0,0,0,0.1)"}
+                onMouseOut={e => e.currentTarget.style.background = "rgba(0,0,0,0.05)"}
               >
                 <svg width="20" height="20" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24">
                   <path d="M9 18l6-6-6-6" />
@@ -695,7 +700,7 @@ export default function ReelsShowcase() {
                       width: "100%"
                     }}
                   >
-                    <ReelCard reel={videoReels[activeIndex]} isActive={true} isMobile={true} onHover={() => {}} />
+                    <ReelCard reel={videoReels[activeIndex]} isActive={true} isMobile={true} onHover={() => { }} />
                   </motion.div>
                 </AnimatePresence>
               </div>
