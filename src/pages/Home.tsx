@@ -55,6 +55,7 @@ export default function Home({ onOpenEnquiry }: { onOpenEnquiry?: () => void }) 
       {/* ===== HERO SECTION ===== */}
       <section
         style={{
+          background: "#f5f3ff",
           minHeight: "100vh",
           display: "flex",
           alignItems: "center",
@@ -189,14 +190,14 @@ export default function Home({ onOpenEnquiry }: { onOpenEnquiry?: () => void }) 
               {/* Main image card */}
               <div className="glass-dark" style={{ padding: "8px" }}>
                 <video
-                  src="/hero-video.mp4"
+                  src="/video.mp4"
                   autoPlay
                   loop
                   muted
                   playsInline
                   style={{
                     width: "100%",
-                    height: "auto",
+                    height: "420px",
                     objectFit: "cover",
                     borderRadius: "1.25rem",
                     display: "block",
